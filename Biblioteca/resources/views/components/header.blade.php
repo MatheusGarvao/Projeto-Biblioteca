@@ -1,3 +1,3 @@
 <div>
-    Eita isso funcionou
+  <img src="{{ asset('storage/imagens/LogoUnifil.png') }}">
 </div>
