@@ -1,0 +1,12 @@
+#header{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(255, 129, 27);
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+}
+.imagem{
+    align-items: center;
+}
