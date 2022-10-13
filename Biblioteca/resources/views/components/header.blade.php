@@ -1,4 +1,6 @@
 <div id="header">
-    <img src="{{ asset('storage/imagens/Logo.svg') }}" class="imagem">
-    <img src="{{ asset('storage/imagens/LogoComp.png') }}" class="imagem">
+    <div class="flex">
+        <img src="{{ asset('storage/imagens/Logo.svg') }}">
+        <h1 class="flex">Titulo</h1>
+    </div>
 </div>

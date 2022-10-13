@@ -13,15 +13,12 @@
 </head>
 
 <body>
- 
-        <x-header></x-header>
-  
-    <div class="hehe"> heheheeh</div>
+    <x-header></x-header>
+
     
+
     
-    <!-- <br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
 </body>
 
 </html>
