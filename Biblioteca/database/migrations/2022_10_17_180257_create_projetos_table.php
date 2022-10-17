@@ -14,8 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('projetos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('nomeprojeto');
+            $table->text('descricao')->nullable(true);
+            $table->string('curso');
+            $table->integer('quantidadevisitadas')->nullable(false)->default(0);
+            $table->text('linkprojeto');
+            $table->timestamp('horarioupload');
+            $table->boolean('projetoativo')->default(true);
         });
     }
 
