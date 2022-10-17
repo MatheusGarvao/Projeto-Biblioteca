@@ -15,10 +15,6 @@
 <body>
     <x-header></x-header>
 
-    
-
-    
-
 </body>
 
 </html>
