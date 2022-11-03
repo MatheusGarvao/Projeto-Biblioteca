@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProjetosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('MainPage');
+});
+
+Route::get('projetos',[ProjetosController::class,'get']);
+
+Route::get('/paginaprojeto', function () {
+    return view('paginaprojeto');
 });
