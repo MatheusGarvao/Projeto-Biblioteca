@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('projetos', function (Blueprint $table) {
+        Schema::create('cursos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nomeprojeto');
-            $table->text('descricao')->nullable(true);
-            $table->integer('codigocurso');
-            $table->integer('quantidadevisitadas')->nullable(false)->default(0);
-            $table->text('linkprojeto');
+            $table->string('nomecurso');
+            $table->string('cor');
+            $table->boolean('ativo')->default(true);
             $table->timestamps();
-            $table->boolean('projetoativo')->default(true);
         });
     }
 
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projetos');
+        Schema::dropIfExists('cursos');
     }
 };

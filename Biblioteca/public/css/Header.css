@@ -6,9 +6,10 @@ header {
     z-index: 1;
 }
 
-header+div{
+header+div {
     height: 75px;
 }
+
 .flex {
     display: flex;
     width: 100%;
@@ -21,11 +22,14 @@ header+div{
     width: 55px;
 }
 
-.flex h1 {
-    min-width: 250px;
+.flex h1{
+   
+    border-left: 75px solid #f000;
+    border-right: 75px solid #f000;
+    min-width: fit-content;
     height: max-content;
     position: fixed;
     justify-content: center;
     color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }

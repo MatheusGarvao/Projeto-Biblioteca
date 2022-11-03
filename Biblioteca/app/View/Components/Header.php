@@ -11,9 +11,13 @@ class Header extends Component
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
+
+    public $text = "Página Principal";
+
+
+    public function __construct(){
+
+
     }
 
     /**
@@ -21,8 +25,10 @@ class Header extends Component
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render()
-    {
+    public function render(){
+
+        
+
         return view('components.header');
     }
 }
