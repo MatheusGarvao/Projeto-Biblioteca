@@ -1,0 +1,33 @@
+.cartao{
+    cursor: pointer;
+    margin: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #000;
+    border-top: 5px solid #ff0000;
+    width: 354px;
+    height: 130px;
+    font-size: 15px;
+}
+
+button{
+    background: none;
+    padding: 10px;
+}
+.descricao{
+    margin: 9px;
+}
+.cartao:hover{
+    -webkit-box-shadow: 1px 10px 16px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 10px 16px -2px rgba(0,0,0,0.75);
+    box-shadow: 1px 10px 16px -2px rgba(0,0,0,0.75);
+    transition: all 0.5s ease-in-out;
+}
+.cartao:not(:hover){
+    border: 1px solid #000;
+    border-top: 5px solid #ff0000;
+    transition: all 0.5s ease-in-out;
+}
