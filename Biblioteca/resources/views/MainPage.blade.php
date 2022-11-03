@@ -9,11 +9,17 @@
 
     <link rel="stylesheet" href="css\Header.css">
     <link rel="stylesheet" href="css\MainPage.css">
+    <link rel="stylesheet" href="css\cards.css">
+
 
 </head>
 
 <body>
     <x-header></x-header>
+    <x-cards></x-cards>
+    
+
+ 
 
 </body>
 
