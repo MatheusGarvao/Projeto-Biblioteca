@@ -1,17 +1,13 @@
-@extends('layouts.paginas')
+@extends('layouts.paginas',['text'=>"$projeto->nomeprojeto"])
 
-@section('titulo', 'Pagina Projeto')
 
-<head>
-    <link rel="stylesheet" href="css\Header.css">
-    <link rel="stylesheet" href="css\Padrao.css">
-    <link rel="stylesheet" href="css\PaginaProjetos.css">
-</head>
+@section('estilos')
+    <link href="{{ asset('css/Header.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/Padrao.css') }}" rel="stylesheet" type="text/css">
+@endsection
 
 
 @section('conteudo')
-    <div id="box">
 
-        teqtqe
-    </div>
+
 @endsection

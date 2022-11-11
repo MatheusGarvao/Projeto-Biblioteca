@@ -1,15 +1,20 @@
-@extends('layouts.paginas')
+@extends('layouts.paginas',['text'=>"Biblioteca de Trabalhos"])
 
-@section('titulo', 'Biblioteca de trabalhos')
 
-<head>
-    <link rel="stylesheet" href="css\Header.css">
-    <link rel="stylesheet" href="css\Padrao.css">
-</head>
 
-@section('conteudo')
-        ee
-         <x-cards></x-cards>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+@section('estilos')
+    <link href="{{ asset('css/Header.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/Padrao.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/Cards.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
+@section('conteudo')
+    <div class="tabela">
+        @foreach ($projetos as $projeto)
+            <x-cards :projeto="$projeto"> </x-cards>
+        @endforeach
+
+
+    </div>
+
+@endsection

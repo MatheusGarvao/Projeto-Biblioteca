@@ -1,8 +1,11 @@
-<link rel="stylesheet" href="cards.css">
+<?php use App\Http\Controllers\CursosController; ?>
 
+<div class="cartao" style="border-top: 5px solid {{ CursosController::mostrarCurso($projeto->codigocurso)->cor }};">
+    <a href="{{ route('projeto.pagina', ['id' => Crypt::encrypt($projeto->id)] ) }}" >
 
-<div class="cartao">
-  <div class="titulo"><strong>Programação</strong></div>
-  <div class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum illum eum obcaecati nihil quo voluptate quibusdam ullam error, exercitationem eos, expedita ex nam, numquam incidunt.</div>
+        <div class="titulo"><strong>{{ $projeto->nomeprojeto }}</strong></div>
+        <div class="descricao">{{ $projeto->descricao }}</div>
+    </a>
 
 </div>
+
