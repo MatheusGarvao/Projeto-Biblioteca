@@ -4,20 +4,18 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Header extends Component
+class Cards extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
+    public $projeto;
 
-    public $text;
-
-
-    public function __construct($text)
+    public function __construct($projeto)
     {
-        $this->text = $text;
+        $this->projeto = $projeto;
     }
 
     /**
@@ -27,6 +25,6 @@ class Header extends Component
      */
     public function render()
     {
-        return view('components.header');
+        return view('components.cards');
     }
 }

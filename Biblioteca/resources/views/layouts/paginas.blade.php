@@ -4,17 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('titulo')</title>
-
+    <title>{{$text}}</title>
+    @yield('estilos')
 </head>
 
 <body>
 
-    <x-header />
-    <div>
-        @yield('conteudo')
+    <x-header :text="$text"></x-header>
 
-    </div>
+    @yield('conteudo')
+
+
 
 </body>
 

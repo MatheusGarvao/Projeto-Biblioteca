@@ -17,19 +17,25 @@ header+div {
     align-items: center;
 }
 
-.flex img {
+.flex a img {
     margin-left: 10px;
     width: 55px;
 }
 
-.flex h1{
-   
-    border-left: 75px solid #f000;
-    border-right: 75px solid #f000;
+
+.flex h1 {
+    left: 75px;
+    border-right: 150px solid #f000;
     min-width: fit-content;
     height: max-content;
     position: fixed;
     justify-content: center;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width:370px) {
+    .flex h1 {
+        white-space: nowrap;
+    }
 }
