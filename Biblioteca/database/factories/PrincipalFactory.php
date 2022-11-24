@@ -4,11 +4,10 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Cursos>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Principal>
  */
-class CursosFactory extends Factory
+class PrincipalFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,8 +17,7 @@ class CursosFactory extends Factory
     public function definition()
     {
         return [
-            'nomecurso'=>fake()->name(),
-            'cor'=>fake()->hexColor(),
+            'nomeitem'=>"paginaprincipal",
         ];
     }
 }

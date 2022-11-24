@@ -5,15 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Projetos extends Model
+class Principal extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nomeprojeto',
-        'descricao',
-        'nomealuno',
-        'codigocurso',
-        'linkprojeto'
+        'nomeitem'
     ];
-};
+}
