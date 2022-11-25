@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Http\Controllers\CursosController;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Projetos>
@@ -19,7 +21,8 @@ class ProjetosFactory extends Factory
         return [
             'nomeprojeto'=> fake()->name(),
             'descricao'=> fake()->text(),
-            'codigocurso' =>fake()->numberBetween(1,3) ,
+            'nomealuno'=> fake()->name(),
+            'codigocurso' =>fake()->numberBetween(1,CursosController::quantidadeCursos()) ,
             'linkprojeto' => fake()->text(),
         ];
     }

@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjetosController;
-use App\Models\Projetos;
+use App\Http\Controllers\PrincipalController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,6 @@ use App\Models\Projetos;
 */
 
 
-Route::get('/', [ProjetosController::class, 'get']);
+Route::get('/', [PrincipalController::class, 'get']);
 
-Route::get('/paginaprojeto/{id}', [ProjetosController::class, 'show'])->name('projeto.pagina');
+Route::get('/{id}', [ProjetosController::class, 'show'])->name('projeto.pagina');

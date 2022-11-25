@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Cursos;
 use App\Models\Projetos;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -28,7 +29,8 @@ class DatabaseSeeder extends Seeder
         //     'cor' => '#ffffff'
         // ]);
 
-
+        Cursos::factory(10)->create();
         Projetos::factory(10)->create();
+
     }
 }
