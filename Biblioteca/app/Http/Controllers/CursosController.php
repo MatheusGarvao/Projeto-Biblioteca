@@ -11,7 +11,6 @@ class CursosController extends Controller
     public static function mostrarCurso($id)
     {
         $cursos = Cursos::find($id);
-
         return $cursos;
     }
 
