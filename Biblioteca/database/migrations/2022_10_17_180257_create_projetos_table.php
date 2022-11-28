@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('codigocurso');
             $table->integer('quantidadevisitadas')->nullable(false)->default(0);
             $table->text('linkprojeto');
+            $table->integer('quantidadeclicklink')->nullable(false)->default(0);
             $table->timestamps();
             $table->boolean('projetoativo')->default(true);
         });

@@ -17,6 +17,8 @@ use App\Http\Controllers\PrincipalController;
 */
 
 
-Route::get('/', [PrincipalController::class, 'get']);
+Route::get('/', [PrincipalController::class, 'get'])->name('inicial');
 
 Route::get('/{id}', [ProjetosController::class, 'show'])->name('projeto.pagina');
+
+Route::get('/projeto/{id}',[ProjetosController::class, 'showPage'])->name('projeto.link');

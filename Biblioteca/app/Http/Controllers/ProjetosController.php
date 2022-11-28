@@ -30,4 +30,11 @@ class ProjetosController extends Controller
             return $this->paginaPrincipal->get(1);
         }
     }
+
+    function showPage($id){
+        $projeto = Projetos::FindOrFail($id);
+        $projeto->quantidadeclicklink++;
+        $projeto->save();
+        return redirect()->to($projeto->linkprojeto);
+    }
 }
