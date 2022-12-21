@@ -32,7 +32,7 @@
             <section>
                 <h3>Curso:</h3>
                 <p>
-                    {{ CursosController::mostrarCurso($projeto->codigocurso)->nomecurso }}
+                    {{ CursosController::mostrarCurso($projeto->fk_cursos_id)->nomecurso }}
                 </p>
             </section>
 

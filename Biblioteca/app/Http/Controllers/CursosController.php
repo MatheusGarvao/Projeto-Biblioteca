@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cursos;
+use App\Models\Curso;
 
 
 class CursosController extends Controller
@@ -10,12 +10,12 @@ class CursosController extends Controller
     //
     public static function mostrarCurso($id)
     {
-        $cursos = Cursos::find($id);
-        return $cursos;
+        $curso = Curso::find($id);
+        return $curso;
     }
 
     public static function quantidadeCursos(){
-        $cursos = Cursos::count();
+        $cursos = Curso::count();
         return $cursos;
     }
 }

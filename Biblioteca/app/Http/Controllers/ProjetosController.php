@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Projetos;
+use App\Models\Projeto;
 use App\Http\Controllers\PrincipalController;
 use Exception;
 
@@ -18,7 +18,7 @@ class ProjetosController extends Controller
     function show($id)
     {
         try {
-            $projeto = Projetos::FindOrFail($id);
+            $projeto = Projeto::FindOrFail($id);
         } catch (Exception $e) {
             return $this->paginaPrincipal->get(1);
         }
@@ -32,7 +32,7 @@ class ProjetosController extends Controller
     }
 
     function showPage($id){
-        $projeto = Projetos::FindOrFail($id);
+        $projeto = Projeto::FindOrFail($id);
         $projeto->quantidadeclicklink++;
         $projeto->save();
         return redirect()->to($projeto->linkprojeto);

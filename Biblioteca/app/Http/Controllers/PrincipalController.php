@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Principal;
-use App\Models\Projetos;
+use App\Models\Projeto;
 
 class PrincipalController extends Controller
 {
@@ -18,7 +18,7 @@ class PrincipalController extends Controller
         $pagina = Principal::Find(1);
         $pagina->quantidadevisitadas++;
         $pagina->save();
-        $projetos = Projetos::all()->sortBy('nomeprojeto')->where('projetoativo', 1);
+        $projetos = Projeto::all()->sortBy('nomeprojeto')->where('projetoativo', 1);
         return View('MainPage')->with(["projetos" => $projetos]);
     }
 }

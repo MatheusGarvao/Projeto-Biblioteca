@@ -14,16 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('projetos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->comment('');
+            $table->integer('id', true);
             $table->string('nomeprojeto');
-            $table->text('descricao')->nullable(true);
-            $table->text('nomealuno');
-            $table->integer('codigocurso');
-            $table->integer('quantidadevisitadas')->nullable(false)->default(0);
+            $table->text('descricao')->nullable();
+            $table->string('nomealuno');
+            $table->integer('quantidadevisitadas')->default(0);
             $table->text('linkprojeto');
-            $table->integer('quantidadeclicklink')->nullable(false)->default(0);
-            $table->timestamps();
+            $table->integer('quantidadeclicklink')->default(0);
             $table->boolean('projetoativo')->default(true);
+            $table->integer('fk_cursos_id')->index('FK_projetos_2');
+            $table->timestamps();
         });
     }
 
