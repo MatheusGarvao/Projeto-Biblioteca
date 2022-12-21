@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->comment('');
+            $table->integer('id', true);
             $table->string('nomecurso');
-            $table->string('cor');
+            $table->string('cor', 7);
             $table->timestamps();
         });
     }

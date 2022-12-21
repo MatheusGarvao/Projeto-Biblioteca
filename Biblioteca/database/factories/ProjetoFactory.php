@@ -9,7 +9,7 @@ use App\Http\Controllers\CursosController;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Projetos>
  */
-class ProjetosFactory extends Factory
+class ProjetoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class ProjetosFactory extends Factory
             'nomeprojeto'=> fake()->name(),
             'descricao'=> fake()->text(),
             'nomealuno'=> fake()->name(),
-            'codigocurso' =>fake()->numberBetween(1,CursosController::quantidadeCursos()) ,
+            'fk_cursos_id' =>fake()->numberBetween(1,CursosController::quantidadeCursos()) ,
             'linkprojeto' => fake()->text(),
         ];
     }

@@ -11,27 +11,23 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Principal
+ * Class Curso
  *
  * @property int $id
- * @property string $nomeitem
- * @property int $quantidadevisitadas
+ * @property string $nomecurso
+ * @property string $cor
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
  * @package App\Models
  */
-class Principal extends Model
+class Curso extends Model
 {
     use HasFactory;
-	protected $table = 'principal';
-
-	protected $casts = [
-		'quantidadevisitadas' => 'int'
-	];
+	protected $table = 'cursos';
 
 	protected $fillable = [
-		'nomeitem',
-		'quantidadevisitadas'
+		'nomecurso',
+		'cor'
 	];
 }

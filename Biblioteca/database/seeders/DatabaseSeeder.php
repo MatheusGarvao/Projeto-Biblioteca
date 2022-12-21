@@ -4,8 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Cursos;
-use App\Models\Projetos;
+use App\Models\Curso;
+use App\Models\Projeto;
 
 
 class DatabaseSeeder extends Seeder
@@ -29,8 +29,8 @@ class DatabaseSeeder extends Seeder
         //     'cor' => '#ffffff'
         // ]);
 
-        Cursos::factory(10)->create();
-        Projetos::factory(10)->create();
+        Curso::factory(10)->create();
+        Projeto::factory(10)->create();
 
     }
 }
