@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:9000"
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: biblioteca
+      MYSQL_USER: projetos
+      MYSQL_PASSWORD: projetobiblioteca1
+      MYSQL_ROOT_PASSWORD: projetobiblioteca1
+    ports:
+      - "3306:3306"
