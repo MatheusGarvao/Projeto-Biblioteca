@@ -1,0 +1,92 @@
+.linha {
+    border-bottom: 2px solid rgb(255, 129, 27);
+    width: 100px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#informacoes {
+    display: grid;
+    margin: auto;
+    max-width: 1350px;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+#informacoes>div {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+@media screen and (max-width:655px) {
+    #informacoes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* a partir daqui, está sendo arrumado todos os itens dentro do ID informacoes, em cima da main page. */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-escolha {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(255, 129, 27);
+    border: 1px solid #ccc;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    min-width: 165px;
+    text-align: center;
+}
+
+.dropdown-checkbox {
+    display: none;
+}
+
+.dropdown-checkbox:checked~.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1;
+    margin-top: 40px;
+    display: none;
+    min-width: 160px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    padding: 1px;
+    text-align: start;
+    border-bottom: 0.5px dotted rgb(255, 129, 27);
+}
+
+.dropdown-menu li>p {
+    display: inline;
+    vertical-align: middle;
+}
+
+.dropdown-menu>li>div{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    float: right;
+}
+
+label>a{
+    position: relative;
+width: auto;
+padding: 10px 40px 10px 40px;
+    color:inherit;
+    text-decoration: none;
+
+}
