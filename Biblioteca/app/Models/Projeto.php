@@ -24,6 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $fk_cursos_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property string $linkyoutube
  *
  * @package App\Models
  */
@@ -46,6 +47,7 @@ class Projeto extends Model
 		'quantidadevisitadas',
 		'linkprojeto',
 		'quantidadeclicklink',
+        'linkyoutube',
 		'projetoativo',
 		'fk_cursos_id'
 	];

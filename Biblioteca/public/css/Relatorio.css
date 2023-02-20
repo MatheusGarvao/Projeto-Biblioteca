@@ -1,0 +1,42 @@
+#conteudo {
+    width: 90%;
+    margin-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conteudoespecifico {
+    width: 100%;
+}
+
+#conteudo td {
+    background-color: rgb(255, 129, 27);
+    font-size: 30px;
+    text-align: center;
+}
+
+.titulos>td {
+    border: rgb(0, 0, 0) solid 1px;
+}
+
+#conteudo .conteudoespecifico>tbody>tr:nth-child(2)>td {
+    font-size: 25px;
+}
+
+
+#projetos{
+    width: 100%;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    text-align: center;
+
+}
+#projetos>tbody tr:nth-child(even){
+    background-color: #F6DDCC
+}
+#projetos>tbody tr:nth-child(odd){
+    background-color: #EDBB99;
+}

@@ -16,7 +16,7 @@ class Pagprincipal extends Seeder
     public function run()
     {
         //rode ao menos uma vez esse seeder.
-
+        Principal::factory(1)->create();
         Principal::factory()->create([
                  'nomeitem'=>'relatorio',
          ]);

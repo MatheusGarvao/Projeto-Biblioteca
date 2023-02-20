@@ -35,4 +35,14 @@ class PrincipalController extends Controller
         $pagina->quantidadevisitadas++;
         $pagina->save();
     }
+
+    public static function getQuantidadeProjetos(){
+        return Projeto::count();
+    }
+
+    public static function getPrincipais($id)
+    {
+        $item = Principal::find($id);
+        return $item;
+    }
 }

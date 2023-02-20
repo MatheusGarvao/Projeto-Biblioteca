@@ -14,7 +14,7 @@
         <div class="menu">
             <input type="checkbox" id="dropdown-checkbox" class="dropdown-checkbox">
             <label for="dropdown-checkbox" class="dropdown-escolha">
-                Legenda das cores <span>&#43;</span>
+                Legenda das cores <span></span>
             </label>
             <ul class="dropdown-menu">
                 @foreach (Cursoscontroller::mostrarcursos() as $curso)

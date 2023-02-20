@@ -10,17 +10,14 @@ class CursosController extends Controller
     //
 
     public static function mostrarCursos(){
-        $cursos = Curso::all()->sortBy('nomecurso');
-        return $cursos;
+     return Curso::all()->sortBy('nomecurso');
     }
     public static function mostrarCurso($id)
     {
-        $curso = Curso::find($id);
-        return $curso;
+        return Curso::find($id);
     }
 
     public static function quantidadeCursos(){
-        $cursos = Curso::count();
-        return $cursos;
+        return Curso::count();
     }
 }
