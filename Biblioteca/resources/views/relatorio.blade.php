@@ -76,24 +76,35 @@
             </tr>
             @foreach ($projetos as $projeto)
                 <tr>
-                    <td>
-                        {{ $projeto->nomeprojeto }}
-                    </td>
-                    <td>
-                        {{ $projeto->quantidadevisitadas }}
-                    </td>
-                    <td>
-                        {{ $projeto->quantidadeclicklink }}
-                    </td>
-                    <td class="disqus-comment-count"
-                        data-disqus-url="{{ route('projeto.pagina', ['id' => $projeto->id]) }}">
-                    0 Comentários
-                    </td>
+                    <a target="_blank" href='{{ route('projeto.link', ['id' => $projeto->id]) }}'>
+                        <td>
+
+                            {{ $projeto->nomeprojeto }}
+
+                        </td>
+                        <td>
+
+                            {{ $projeto->quantidadevisitadas }}
+
+                        </td>
+                        <td>
+
+                            {{ $projeto->quantidadeclicklink }}
+
+                        </td>
+                        <td class="disqus-comment-count"
+                            data-disqus-url="{{ route('projeto.pagina', ['id' => $projeto->id]) }}">
+
+                        </td>
+                    </a>
                 </tr>
             @endforeach
         </tbody>
     </table>
 
-    <script id="dsq-count-scr" src="//biblioteca-de-trabalhos.disqus.com/count.js" async>DISQUSWIDGETS.getCount({ reset: true })</script>
-
+    <script id="dsq-count-scr" src="//biblioteca-de-trabalhos.disqus.com/count.js" async>
+        DISQUSWIDGETS.getCount({
+            reset: true
+        })
+    </script>
 @endsection

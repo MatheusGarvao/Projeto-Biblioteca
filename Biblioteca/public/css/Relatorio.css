@@ -32,11 +32,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
     text-align: center;
+    border-spacing: 0px 2px;
 
 }
 #projetos>tbody tr:nth-child(even){
     background-color: #F6DDCC
 }
 #projetos>tbody tr:nth-child(odd){
-    background-color: #EDBB99;
+    background-color: #f1cdb5;
 }
