@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Session\TokenMismatchException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -25,6 +26,14 @@ class Handler extends ExceptionHandler
         //
     ];
 
+    public function render($request, Throwable $exception)
+    {
+        if ($exception instanceof TokenMismatchException) {
+            return redirect()->back();
+        }
+
+        return parent::render($request, $exception);
+    }
     /**
      * A list of the inputs that are never flashed to the session on validation exceptions.
      *

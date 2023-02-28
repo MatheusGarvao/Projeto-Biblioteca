@@ -36,6 +36,7 @@ class Projeto extends Model
 	protected $casts = [
 		'quantidadevisitadas' => 'int',
 		'quantidadeclicklink' => 'int',
+        'quantidadelikes' => 'int',
 		'projetoativo' => 'bool',
 		'fk_cursos_id' => 'int'
 	];
@@ -48,6 +49,7 @@ class Projeto extends Model
 		'linkprojeto',
 		'quantidadeclicklink',
         'linkyoutube',
+        'quantidadelikes',
 		'projetoativo',
 		'fk_cursos_id'
 	];

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjetosController;
 use App\Http\Controllers\PrincipalController;
-
+use App\Http\Controllers\RelatoriosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +22,13 @@ Route::get('/', [PrincipalController::class, 'get'])->name('inicial');
 
 Route::get('/{id}', [ProjetosController::class, 'show'])->name('projeto.pagina');
 
+Route::get('/relatorio/projeto/{id}',[RelatoriosController::class, 'get'])->name('relatorio.projeto');
+
 Route::get('/projeto/{id}',[ProjetosController::class, 'showPage'])->name('projeto.link');
 
 
+Route::post('/projeto/{id}/like', [ProjetosController::class, 'like'])->name('projeto.like');
+
+Route::get('/{any}', function () {
+    return redirect()->route('inicial');
+})->where('any', '.*');

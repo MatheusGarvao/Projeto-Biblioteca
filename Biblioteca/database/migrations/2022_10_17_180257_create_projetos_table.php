@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('quantidadevisitadas')->default(0);
             $table->text('linkprojeto');
             $table->integer('quantidadeclicklink')->default(0);
+            $table->integer('quantidadelikes')->default(0);
             $table->string('linkyoutube');
             $table->boolean('projetoativo')->default(true);
             $table->integer('fk_cursos_id')->index('FK_projetos_2');

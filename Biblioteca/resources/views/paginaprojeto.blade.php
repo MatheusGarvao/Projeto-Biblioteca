@@ -4,19 +4,31 @@
 
 
 @section('estilos')
-    <link href="{{ asset('css/Header.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/Padrao.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/Alerta.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
     <link href="{{ asset('css/PaginaProjetos.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
 
 @section('conteudo')
+    @if (session('like') === 0)
+        <label>
+            <input type="checkbox" class="alertCheckbox" autocomplete="off" />
+            <div class="alert error">
+                <span class="alertClose">X</span>
+                <span class="alertText">Você já curtiu esse projeto!
+                    <br class="clear" /></span>
+            </div>
+        </label>
+    @endif
+
     <div class="informacoes">
         <div class="descricao">
             <h2>Descrição</h2>
             <p>
                 {{ $projeto->descricao }}
             </p>
+
         </div>
 
         <div class="projeto">
@@ -45,12 +57,22 @@
                     </a>
                 </div>
             </div>
-
+            <div class="botaoprojeto">
+                <form method="POST" action="{{ route('projeto.like', ['id' => $projeto->id]) }}">
+                    @csrf
+                    <!-- Rest of the form code -->
+                    <button type="submit" id="like"><i class="bx bx-like"></i>
+                        {{ $projeto->quantidadelikes }}</button>
+                </form>
+            </div>
         </div>
     </div>
 
     </div>
-
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7zNQDevKmu8" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     <div id="disqus_thread"></div>
     <script>
         (function() {
@@ -58,12 +80,8 @@
                 s = d.createElement('script');
             s.src = 'https://biblioteca-de-trabalhos.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
-            window.DISQUSWIDGETS = undefined;
             (d.head || d.body).appendChild(s);
         })();
-
-
-
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
             Disqus.</a></noscript>

@@ -25,19 +25,37 @@
     font-size: 25px;
 }
 
-
-#projetos{
+.projetos{
     width: 100%;
-    margin-top: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
-    text-align: center;
     border-spacing: 0px 2px;
+}
+
+.projetos td{
+    width: 25%;
 
 }
-#projetos>tbody tr:nth-child(even){
+
+.projetos tr{
+    text-align: center;
+}
+
+.projetos tr td a{
+    text-decoration: none;
+    color:black;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+a .projetos>tbody tr,#conteudo+table>tbody tr:first-child{
+    background-color: #f1cdb5;
+}
+#conteudo+table>tbody tr{
     background-color: #F6DDCC
 }
-#projetos>tbody tr:nth-child(odd){
-    background-color: #f1cdb5;
+tr+tr+tr:hover td{
+    background-color: rgb(235, 235, 235) !important;
+    color: blue;
 }

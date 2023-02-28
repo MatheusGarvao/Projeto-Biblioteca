@@ -3,8 +3,6 @@
 @extends('layouts.paginas', ['text' => 'Biblioteca de Trabalhos'])
 
 @section('estilos')
-    <link href="{{ asset('css/Header.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/Padrao.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/Cards.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/MainPage.css') }}" rel="stylesheet" type="text/css">
 @endsection

@@ -23,7 +23,8 @@ class ProjetoFactory extends Factory
             'descricao'=> fake()->text(),
             'nomealuno'=> fake()->name(),
             'fk_cursos_id' =>fake()->numberBetween(1,CursosController::quantidadeCursos()) ,
-            'linkprojeto' => fake()->text(),
+            'linkprojeto' => fake()->url(),
+            'linkyoutube'=> fake()->url(),
         ];
     }
 }

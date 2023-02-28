@@ -3,8 +3,6 @@
 @extends('layouts.paginas', ['text' => 'Relatório'])
 
 @section('estilos')
-    <link href="{{ asset('css/Header.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/Padrao.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/Relatorio.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
@@ -52,7 +50,7 @@
 
         </tbody>
     </table>
-    <table id='projetos'>
+    <table class="projetos">
         <tbody>
             <tr>
                 <td colspan="4">
@@ -74,29 +72,37 @@
                 </td>
 
             </tr>
+
             @foreach ($projetos as $projeto)
                 <tr>
-                    <a target="_blank" href='{{ route('projeto.link', ['id' => $projeto->id]) }}'>
-                        <td>
+                    <td colspan="4">
+                        <a href='{{ route('relatorio.projeto', ['id' => $projeto->id]) }}'>
+                            <table class="projetos">
+                                <tbody>
+                                    <tr>
+                                        <td>
 
-                            {{ $projeto->nomeprojeto }}
+                                            {{ $projeto->nomeprojeto }}
 
-                        </td>
-                        <td>
+                                        </td>
+                                        <td>
 
-                            {{ $projeto->quantidadevisitadas }}
+                                            {{ $projeto->quantidadevisitadas }}
 
-                        </td>
-                        <td>
+                                        </td>
+                                        <td>
 
-                            {{ $projeto->quantidadeclicklink }}
+                                            {{ $projeto->quantidadeclicklink }}
 
-                        </td>
-                        <td class="disqus-comment-count"
-                            data-disqus-url="{{ route('projeto.pagina', ['id' => $projeto->id]) }}">
-
-                        </td>
-                    </a>
+                                        </td>
+                                        <td class="disqus-comment-count"
+                                            data-disqus-url="{{ route('projeto.pagina', ['id' => $projeto->id]) }}">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
