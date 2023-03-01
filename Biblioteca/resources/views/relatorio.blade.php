@@ -53,7 +53,7 @@
     <table class="projetos">
         <tbody>
             <tr>
-                <td colspan="4">
+                <td colspan="5">
                     Quantidade de projetos: {{ PrincipalController::getQuantidadeProjetos() }}
                 </td>
             </tr>
@@ -68,6 +68,9 @@
                     Quantidade de acessos
                 </td>
                 <td>
+                    Quantidade de likes
+                </td>
+                <td>
                     Quantidade de comentários
                 </td>
 
@@ -75,8 +78,8 @@
 
             @foreach ($projetos as $projeto)
                 <tr>
-                    <td colspan="4">
-                        <a href='{{ route('relatorio.projeto', ['id' => $projeto->id]) }}'>
+                    <td colspan="5">
+                        <a target="_blank" href='{{ route('projeto.pagina', ['id' => $projeto->id]) }}'>
                             <table class="projetos">
                                 <tbody>
                                     <tr>
@@ -93,6 +96,11 @@
                                         <td>
 
                                             {{ $projeto->quantidadeclicklink }}
+
+                                        </td>
+                                        <td>
+
+                                            {{ $projeto->quantidadelikes }}
 
                                         </td>
                                         <td class="disqus-comment-count"

@@ -22,8 +22,6 @@ Route::get('/', [PrincipalController::class, 'get'])->name('inicial');
 
 Route::get('/{id}', [ProjetosController::class, 'show'])->name('projeto.pagina');
 
-Route::get('/relatorio/projeto/{id}',[RelatoriosController::class, 'get'])->name('relatorio.projeto');
-
 Route::get('/projeto/{id}',[ProjetosController::class, 'showPage'])->name('projeto.link');
 
 
